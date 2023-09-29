@@ -2,6 +2,8 @@ package ru.netology.javaqa.hwjava10.service;
 
 public class Radio {
     private int stationNumber;
+    private int maxStation = 9;
+    private int minStation = 0;
     private int volume = 20;
 
     public int getStationNumber() {
@@ -13,10 +15,10 @@ public class Radio {
     }
 
     public void setCurrentStation(int currentStationNumber) {
-        if (currentStationNumber >= 10) {
+        if (currentStationNumber > maxStation) {
             return;
         }
-        if (currentStationNumber < 0) {
+        if (currentStationNumber < minStation) {
             return;
         }
         stationNumber = currentStationNumber;
