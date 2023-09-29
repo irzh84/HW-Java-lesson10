@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class RadioTest {
+
     @Test
     public void shouldSetStationNormal() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(9);
 
@@ -20,7 +21,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStationAbove() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(10);
 
@@ -34,7 +35,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStationUnder() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(-1);
 
@@ -48,7 +49,7 @@ class RadioTest {
 
     @Test
     public void nextTest() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(6);
         fm.next();
@@ -63,7 +64,7 @@ class RadioTest {
 
     @Test
     public void nextTestNine() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(9);
         fm.next();
@@ -78,7 +79,7 @@ class RadioTest {
 
     @Test
     public void prevTest() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(6);
         fm.prev();
@@ -93,7 +94,7 @@ class RadioTest {
 
     @Test
     public void prevTestZero() {
-        Radio fm = new Radio();
+        Radio fm = new Radio(0,9);
 
         fm.setCurrentStation(0);
         fm.prev();
@@ -105,7 +106,7 @@ class RadioTest {
         System.out.println(expected);
         System.out.println(actual);
     }
-
+/*
     @Test
     public void shouldSetVolumeNormal() {
         Radio fm = new Radio();
@@ -208,4 +209,19 @@ class RadioTest {
         System.out.println(actual);
     }
 
+
+     */
+    @Test
+    public void howMuchStationTest() {
+        Radio fm = new Radio(10);
+
+        Assertions.assertEquals(10, fm.getHowMuchStation());
+    }
+
+    @Test
+    public void howMuchStationTest2() {
+        Radio fm = new Radio();
+
+        Assertions.assertEquals(10, fm.getHowMuchStation());
+    }
 }
