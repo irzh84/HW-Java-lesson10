@@ -5,35 +5,22 @@ public class Radio {
     private int maxStation = 9;
     private int stationNumber = minStation;
     private int howMuchStation = 10;
-
-    public Radio (int minStation, int maxStation) {
-        this.minStation = minStation;
-        this.maxStation = maxStation;
-        this.stationNumber = minStation;
-
-    }
-    public Radio(int howMuchStation) {
-        this.howMuchStation = howMuchStation;
-
-    }
-
-    public Radio() {
-        this.howMuchStation = howMuchStation;
-    }
-
     private int volume = 20;
 
-    public int getMinStation() {
-        return minStation;
+    public Radio() {
     }
-    public int getMaxStation() {
-        return maxStation;
+
+    public Radio(int howMuchStation) {
+        maxStation = minStation + howMuchStation - 1;
     }
 
     public int getStationNumber() {
         return stationNumber;
     }
-    public int getHowMuchStation() {return howMuchStation;}
+
+    public int getHowMuchStation() {
+        return howMuchStation;
+    }
 
     public int getVolume() {
         return volume;
