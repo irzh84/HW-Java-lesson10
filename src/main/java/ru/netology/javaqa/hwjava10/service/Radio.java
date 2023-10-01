@@ -1,5 +1,13 @@
 package ru.netology.javaqa.hwjava10.service;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
     private int minStation = 0;
     private int maxStation = 9;
@@ -7,23 +15,8 @@ public class Radio {
     private int howMuchStation = 10;
     private int volume = 20;
 
-    public Radio() {
-    }
-
     public Radio(int howMuchStation) {
         maxStation = minStation + howMuchStation - 1;
-    }
-
-    public int getStationNumber() {
-        return stationNumber;
-    }
-
-    public int getHowMuchStation() {
-        return howMuchStation;
-    }
-
-    public int getVolume() {
-        return volume;
     }
 
     public void setCurrentStation(int currentStationNumber) {
