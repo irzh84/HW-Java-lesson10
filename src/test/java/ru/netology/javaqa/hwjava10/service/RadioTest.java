@@ -14,8 +14,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -28,8 +26,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -42,8 +38,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -57,8 +51,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -72,8 +64,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -87,8 +77,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -102,8 +90,6 @@ class RadioTest {
         int actual = fm.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -116,8 +102,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -130,8 +114,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -144,8 +126,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -159,8 +139,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -174,8 +152,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -189,8 +165,6 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
     }
 
     @Test
@@ -204,8 +178,25 @@ class RadioTest {
         int actual = fm.getVolume();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(expected);
-        System.out.println(actual);
+    }
+
+    @Test
+    public void howMuchStationTest() {
+        Radio fm = new Radio(10);
+
+        Assertions.assertEquals(10, fm.getHowMuchStation());
+    }
+
+    @Test
+    public void howMuchStationTest15() {
+        Radio fm = new Radio(20);
+
+        fm.setCurrentStation(15);
+
+        int expected = 15;
+        int actual = fm.getStationNumber();
+
+        Assertions.assertEquals(expected, actual);
     }
 
 }
